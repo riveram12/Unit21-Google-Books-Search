@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useFindAndModify: false,
 });
-console.log(MONGODB_URI);
+// console.log(MONGODB_URI);
 
 // Define API routes here
 app.use("/api", routes);
