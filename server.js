@@ -8,7 +8,7 @@ const routes = require("./routes/apiRoutes");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("client/public"));
+app.use(express.static("./client/public"));
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
