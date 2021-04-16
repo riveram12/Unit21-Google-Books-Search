@@ -10,7 +10,10 @@ app.use(express.json());
 
 app.use(express.static("./client/public"));
 
+require("dotenv").config();
+
 mongoose.connect(process.env.MONGODB_URI, {
+  // MONGODB_URI= "mongodb+srv://riveram2:Luna%40Nyc12@cluster0.t6g9u.mongodb.net/Unit21?retryWrites=true&w=majority",
   useNewUrlParser: true,
   useFindAndModify: false,
 });
