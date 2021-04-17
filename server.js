@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./routes/apiRoutes");
 
@@ -10,13 +10,16 @@ app.use(express.json());
 
 app.use(express.static("./client/public"));
 
-require("dotenv").config();
+// require("dotenv").config();
 
-mongoose.connect(process.env.MONGODB_URI, {
-  // MONGODB_URI= "mongodb+srv://riveram2:Luna%40Nyc12@cluster0.t6g9u.mongodb.net/Unit21?retryWrites=true&w=majority",
-  useNewUrlParser: true,
-  useFindAndModify: false,
-});
+mongoose.connect(
+  "mongodb+srv://riveram2:Luna%40Nyc12@cluster0.t6g9u.mongodb.net/Unit21?retryWrites=true&w=majority",
+  {
+    // MONGODB_URI= "mongodb+srv://riveram2:Luna%40Nyc12@cluster0.t6g9u.mongodb.net/Unit21?retryWrites=true&w=majority",
+    useNewUrlParser: true,
+    useFindAndModify: false,
+  }
+);
 // console.log(MONGODB_URI);
 
 // Define API routes here
