@@ -26,7 +26,7 @@ mongoose.connect(
 app.use("/api", routes);
 
 // serve HTML files
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
