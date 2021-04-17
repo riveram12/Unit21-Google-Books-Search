@@ -1,5 +1,5 @@
 import React from "react";
-import 'bootswatch/dist/lumen/bootstrap.min.css';
+import "bootswatch/dist/lumen/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Search from "./pages/Search";
@@ -8,7 +8,7 @@ import NoMatch from "./pages/NoMatch";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <Nav />
         <Switch>
@@ -20,6 +20,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
